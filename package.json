@@ -1,0 +1,18 @@
+{
+  "name": "papergem",
+  "version": "1.0.0",
+  "description": "Stream post data from blogs.",
+  "main": "papergem.js",
+  "scripts": {
+    "test": "mocha test --reporter spec"
+  },
+  "author": "Cindy Zhang",
+  "license": "ISC",
+  "dependencies": {
+    "chai": "^3.3.0",
+    "chai-spies": "^0.7.1",
+    "kefir": "^2.8.2",
+    "lodash": "^3.10.1",
+    "mocha": "^2.3.3"
+  }
+}
