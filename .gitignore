@@ -1,2 +1,3 @@
 /node_modules
-/test/index.js
+api_keys.json
+index.js
