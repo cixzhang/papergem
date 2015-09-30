@@ -17,14 +17,20 @@ describe('a Tumblr stream', function () {
     expect(blog.posts).to.exist;
   });
 
-  it('can be watched', function (done) {
-    expect(blog.watch).to.exist;
-
-    var stream = blog.watch();
+  it('can retrieve all posts', function (done) {
+    expect(blog.retrieve).to.exist;
+    var stream = blog.retrieve();
     stream.onValue(() => done());
   });
 
-  it('can be unwatched', function (done) {
+  it('can watch for new posts', function (done) {
+    expect(blog.watch).to.exist;
+
+    var stream = blog.watch({timeout: 1});
+    stream.onValue(() => done());
+  });
+
+  it('can unwatch', function (done) {
     expect(blog.unwatch).to.exist;
 
     var stream = blog.watch();
